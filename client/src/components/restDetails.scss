@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  //   background-color: aqua;
+  // position: relative;
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+
+  .restPics {
+    width: 100%;
+    height: 350px;
+    // background-color: aqua;
+    // height: 8  00px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      margin-right: 5px;
+    }
+  }
+  .nameSection {
+    // background-color: blueviolet;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    .details {
+      width: 30%;
+      color: rgb(199, 184, 95);
+      border: 1px #852725 solid;
+      padding: 30px;
+      position: relative;
+      //   background-color: blueviolet;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+      span {
+        margin-left: 0;
+        color: black;
+      }
+      .name {
+        margin: 0;
+        font-weight: bold;
+        font-size: 36px;
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    width: 150px;
+    height: 35px;
+    background-color: #852725;
+    color: white;
+  }
+}
+
+.reservations {
+  width: 25%;
+  height: 400px;
+  // background-color: aqua;
+}
+
+.resHolder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px #852725 solid;
+  border-radius: 5px;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  hr {
+    width: 100%;
+
+    // color: #eeeaea;
+    // background-color: #f1eaea;
+  }
+  .resText {
+    color: rgb(199, 184, 95);
+    font-size: 24px;
+    font-weight: bold;
+    align-self: center;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+    label {
+      color: rgb(199, 184, 95);
+    }
+    select {
+      margin-left: 40px;
+    }
+    input {
+      margin-left: 60px;
+    }
+  }
+}

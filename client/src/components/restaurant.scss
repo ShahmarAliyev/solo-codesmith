@@ -1,0 +1,59 @@
+img {
+  margin: 10px 0px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.restName {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #df0906;
+  font-weight: bold;
+}
+.restInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.restHolder {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(110, 106, 106);
+  .restNameHolder {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.priceRating {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons {
+  // margin-top: 20px;
+  height: 60px;
+  width: 100%;
+  // background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.btn {
+  height: 30px;
+  color: #df0906;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  margin-right: 10px;
+}

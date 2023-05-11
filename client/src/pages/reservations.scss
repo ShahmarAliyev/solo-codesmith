@@ -1,0 +1,39 @@
+.resCont {
+  .resoContainer {
+    position: relative;
+  }
+  .deleteReso {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: normal;
+    border: 1px solid rgb(232, 225, 225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 5px;
+    right: 0px;
+    top: 20px;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+  }
+  //   background-color: aqua;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  .reserv {
+    // background-color: blue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    hr {
+      width: 100%;
+    }
+  }
+}

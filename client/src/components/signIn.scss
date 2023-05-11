@@ -1,0 +1,39 @@
+.signin {
+  height: 500px;
+  width: 400px;
+  // background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.signinText {
+  font-size: 28px;
+  color: #df0906;
+}
+.signinForm {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 208, 208);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // background-color: aqua;
+  .emaillabel {
+    // display: flex;
+    // align-items: start;
+    // justify-content: start;
+    margin-right: 13px;
+  }
+  .emailinput {
+    margin-left: 40px;
+  }
+  button {
+    margin-top: 50px;
+    width: 150px;
+    height: 30px;
+  }
+}

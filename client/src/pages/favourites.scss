@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.favHold {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  //   flex-direction: column;
+}
+h1 {
+  font-size: 46px;
+  color: brown;
+}
