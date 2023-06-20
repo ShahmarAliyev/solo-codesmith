@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navLogo'>
-        <NavLink to='/'>LOGO</NavLink>
+        <NavLink to='/'>Shahmar's Notorious Food Application</NavLink>
       </div>
       <div className='navOptions'>
         <NavLink to={user ? '/favourties' : '/auth'}>

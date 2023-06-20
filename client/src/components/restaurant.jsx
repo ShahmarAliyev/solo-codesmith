@@ -23,7 +23,7 @@ const Restaurant = (props) => {
     console.log('userid : ', userId);
     console.log('userid : ', rest);
 
-    const res = await fetch('http://localhost:8080/favourites/add', {
+    const res = await fetch('/api/favourites/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rest, userId }),

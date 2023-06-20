@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new Schema({
+  message: { type: String },
+});
+
 const favRestSchema = new Schema({
   restName: { type: String, required: true },
   image_url: { type: String },
   restId: { type: String },
   is_closed: { type: Boolean },
   location: { type: String },
+  comments: [{ type: commentSchema, default: [] }],
 });
 
 const reservationSchema = new Schema({

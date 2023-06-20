@@ -45,4 +45,45 @@ favController.getFavs = async (req, res, next) => {
   }
 };
 
+favController.writeComment = async (req, res, next) => {
+  console.log('fav controller, create fav');
+  console.log(req.body, 'crate coment req body');
+  const { comment, userId, restName } = req.body;
+  // const { newComment } = comment;
+  console.log(comment);
+  try {
+    const foundUser = await User.findById({ _id: userId });
+    const rest = foundUser.restaurants.filter(
+      (rest) => rest.restName === restName
+    )[0];
+    rest.comments.push({ message: comment });
+    const updatedUser = await foundUser.save();
+    console.log(updatedUser);
+    const updatedComments = rest.comments;
+    console.log('comments array: ', updatedComments);
+    res.locals.comments = updatedComments;
+    return next();
+  } catch (error) {
+    console.log(error);
+  }
+};
+favController.editComment = async (req, res, next) => {
+  const { comment, userId, commentId, restName } = req.body;
+
+  try {
+    const foundUser = await User.findById({ _id: userId });
+    const rest = foundUser.restaurants.filter(
+      (rest) => rest.restName === restName
+    )[0];
+    for (let i = 0; i < rest.comments.length; i++) {
+      if (res.comments[i]._id === commentId) {
+        res.comments[i].message = comment;
+        break;
+      }
+    }
+    const updatedUser = await foundUser.save();
+    console.log(updatedUser);
+    return next();
+  } catch (error) {}
+};
 module.exports = favController;
