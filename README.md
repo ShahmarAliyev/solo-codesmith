@@ -6,7 +6,7 @@ This is a README file for a restaurant search and favorites app. The app allows 
 
 The following technologies and libraries were used to develop this app:
 
-- **@reduxjs/toolkit**: 
+- **@reduxjs/toolkit**:
 - **express**: Version 4.18.2
 - **mongodb**: Version 5.4.0
 - **react**: Version 18.2.0
@@ -27,8 +27,8 @@ The app includes the following features:
 
 4. **Authentication**: The app includes authentication functionality to ensure secure access. Users can create an account, log in, and manage their profile information.
 
-Demo: 
-![Restaurant Search App GIF](../client/public/img/Studio_Project_V2.gif)
+Demo:
+![Restaurant Search App GIF](../client/public/img/gif.gif)
 
 ## Setup and Installation
 
