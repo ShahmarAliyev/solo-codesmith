@@ -27,6 +27,9 @@ The app includes the following features:
 
 4. **Authentication**: The app includes authentication functionality to ensure secure access. Users can create an account, log in, and manage their profile information.
 
+Demo: 
+![Restaurant Search App GIF](https://www.kapwing.com/w/l1Ys1SGBTz)
+
 ## Setup and Installation
 
 To set up the app locally, follow these steps:
