@@ -71,12 +71,10 @@ Open a terminal and navigate to the root directory of the project.
 
 Run the following command to execute the tests using Jest:
 
-Copy code
-jest __tests__/<test-file-name>.js
-Replace <test-file-name> with the name of the individual test file you want to run. For example, if you have a test file named auth.test.js, the command would be:
+Replace <test-file-name> with the name of the individual test file you want to run. 
 
   ```shell
-   jest <[name_of_the_test_file]>
+   jest <test-file-name>.js
    ```
 You can run this command for each test file in the __tests__ folder to execute all the tests.
 
@@ -86,7 +84,6 @@ Alternatively, if you want to run all the tests in the __tests__ folder, you can
    jest
    ```
 This command will run all the test files in the __tests__ folder.
-
 
 Contributions to this project are welcome. To contribute, follow these steps:
 
