@@ -28,7 +28,7 @@ The app includes the following features:
 4. **Authentication**: The app includes authentication functionality to ensure secure access. Users can create an account, log in, and manage their profile information.
 
 Demo:
-![Restaurant Search App GIF](https://ibb.co/G9gNDxv)
+![Restaurant Search App GIF](https://i.ibb.co/w7Djq0N/gif.gif)
 
 ## Setup and Installation
 
