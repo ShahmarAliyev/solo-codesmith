@@ -24,7 +24,6 @@ async function runMongoConnection() {
   const MONGO_URL =
     'mongodb+srv://shahmar:shahmar@solo.qknsilk.mongodb.net/?retryWrites=true&w=majority';
   await mongoose.connect(MONGO_URL);
-  console.log('Connected to mongoDB with mongoose');
 }
 runMongoConnection();
 // app.use('/details', apiRouter);

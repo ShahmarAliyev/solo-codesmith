@@ -14,7 +14,6 @@ const Favs = () => {
       body: JSON.stringify({ userId }),
     });
     let favRests = await res.json();
-    console.log('favrests', favRests);
     setFavs(favRests);
   }, []);
 

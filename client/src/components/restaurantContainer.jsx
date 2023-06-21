@@ -10,7 +10,6 @@ const RestaurantContainer = () => {
   const url = '/api/';
 
   const getRestaurants = useCallback(async () => {
-    console.log('runs get restaurants');
     let res = await fetch(url);
     let data = await res.json();
     setFoundRests(data);
@@ -29,10 +28,6 @@ const RestaurantContainer = () => {
     setKeyword(t);
   };
   const handleSearchClick = useCallback(async () => {
-    console.log(keyword, location);
-
-    console.log('runs handeclick');
-
     let res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -42,7 +37,6 @@ const RestaurantContainer = () => {
     let data = await res.json();
     setFoundRests(data);
   }, [keyword, location]);
-  console.log(keyword, location);
   return (
     <div className='restContainer'>
       <span className='question'>What is on your mind?</span>
@@ -55,7 +49,6 @@ const RestaurantContainer = () => {
         />
         <button
           onClick={() => {
-            console.log('clicked');
             handleSearchClick();
           }}
         >

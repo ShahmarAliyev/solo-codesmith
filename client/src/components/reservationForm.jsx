@@ -7,8 +7,6 @@ const ReservationForm = (props) => {
     time: '4pm',
   });
   const handleChange = (e) => {
-    // console.log(e.target.value);
-    console.log(e.target.value, e.target.name);
     let name = e.target.name;
     let val = e.target.value;
     setRes((prevState) => {
@@ -19,7 +17,6 @@ const ReservationForm = (props) => {
     props.onSubmit(res);
   };
 
-  console.log('res', res);
   return (
     <div className='reservations'>
       <div className='resHolder'>

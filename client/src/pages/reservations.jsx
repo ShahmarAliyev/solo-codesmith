@@ -28,8 +28,6 @@ const Reservations = () => {
       body: JSON.stringify({ userId, name }),
     });
     const text = await response.json();
-    console.log(text);
-    console.log(reservations);
     dispatch(deleteReso());
     window.location.reload();
   };
@@ -43,8 +41,6 @@ const Reservations = () => {
       <h1>Your Reservations</h1>
       {reservations?.map((res) => {
         const readableDate = res.date.slice(0, 10);
-        console.log(readableDate);
-        // console.log(readableDate.slice(0, 10));
 
         return (
           <div key={res.location + res.name} className='resoContainer'>

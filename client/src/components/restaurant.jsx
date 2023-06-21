@@ -19,17 +19,12 @@ const Restaurant = (props) => {
       navigate('/auth');
     }
 
-    console.log('handleAddFav');
-    console.log('userid : ', userId);
-    console.log('userid : ', rest);
-
     const res = await fetch('/api/favourites/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rest, userId }),
     });
     let data = await res.json();
-    console.log('data ', data);
   };
   return (
     <div className='restHolder'>

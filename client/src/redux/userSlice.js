@@ -17,10 +17,6 @@ export const userSlice = createSlice({
 
       state.userId = _id;
       state.email = email;
-
-      // state.userFavs = favourites;
-      // state.userResos = reservations;
-      console.log('ids from slice', _id, state.userId);
     },
     logOutUser: (state) => {
       return (state = initialState);

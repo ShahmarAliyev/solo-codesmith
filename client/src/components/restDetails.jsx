@@ -13,7 +13,6 @@ const RestDetails = (props) => {
   const addReservation = async (formState) => {
     const { size, date, time } = formState;
     const location = rest.location['address1'] + ', ' + rest.location['city'];
-    console.log(userId, date, time, size, location, rest.name, rest.image_url);
     const response = await fetch('/api/reservations/create', {
       method: 'POST',
       headers: {
@@ -35,40 +34,29 @@ const RestDetails = (props) => {
   };
 
   const getDetails = async () => {
-    console.log(restId);
-    console.log('get details');
     const res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ restId }),
     });
     let data = await res.json();
-    console.log(data);
-    console.log('data');
 
     setRest(data);
   };
   useEffect(() => {
-    console.log('useeffectbefore ');
     getDetails();
-    console.log('useeffect after');
   }, []);
   let transactions = rest?.transactions.reduce((acc, curr) => {
     acc += curr + '  ';
     return acc;
   }, '');
   const handleAddFav = async (e) => {
-    console.log('handleAddFav');
-    console.log('userid : ', userId);
-    console.log('userid : ', rest);
-
     const res = await fetch('/api/favourites/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ rest, userId }),
     });
     let data = await res.json();
-    console.log('data ', data);
   };
   return (
     <div className='container'>
