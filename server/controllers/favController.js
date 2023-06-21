@@ -4,9 +4,7 @@ const User = require('../models/model');
 const favController = {};
 
 favController.addFav = async (req, res, next) => {
-  console.log('fav controller, add fav');
   const { rest, userId } = req.body;
-  console.log('reqbody, add fav', req.body);
   const { name, image_url, id, is_closed, location } = rest;
   const adress = location['address1'] + ', ' + location['city'];
   let newRest = {
@@ -25,32 +23,22 @@ favController.addFav = async (req, res, next) => {
       }
     );
     res.locals.restaurants = newFavRest.restaurants;
-    console.log('newfavrest ', newFavRest);
     return next();
-  } catch (error) {
-    console.log(error.message);
-  }
+  } catch (error) {}
 };
 
 favController.getFavs = async (req, res, next) => {
-  console.log('fav controller, get favs');
   const { userId } = req.body;
   try {
     const user = await User.findOne({ _id: userId });
-    console.log('fav arr ', user.restaurants);
     res.locals.restaurants = user.restaurants;
     return next();
-  } catch (error) {
-    console.log(error.message);
-  }
+  } catch (error) {}
 };
 
 favController.writeComment = async (req, res, next) => {
-  console.log('fav controller, create fav');
-  console.log(req.body, 'crate coment req body');
   const { comment, userId, restName } = req.body;
   // const { newComment } = comment;
-  console.log(comment);
   try {
     const foundUser = await User.findById({ _id: userId });
     const rest = foundUser.restaurants.filter(
@@ -58,14 +46,10 @@ favController.writeComment = async (req, res, next) => {
     )[0];
     rest.comments.push({ message: comment });
     const updatedUser = await foundUser.save();
-    console.log(updatedUser);
     const updatedComments = rest.comments;
-    console.log('comments array: ', updatedComments);
     res.locals.comments = updatedComments;
     return next();
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 favController.editComment = async (req, res, next) => {
   const { comment, userId, commentId, restName } = req.body;
@@ -82,7 +66,6 @@ favController.editComment = async (req, res, next) => {
       }
     }
     const updatedUser = await foundUser.save();
-    console.log(updatedUser);
     return next();
   } catch (error) {}
 };

@@ -4,8 +4,6 @@ const initialState = {
   userId: null,
   email: '',
   resoCount: 0,
-  // userFavs: [],
-  // userResos: [],
 };
 
 export const userSlice = createSlice({

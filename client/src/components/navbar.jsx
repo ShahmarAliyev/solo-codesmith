@@ -9,7 +9,6 @@ const Navbar = () => {
   });
 
   const { resoCount } = useSelector((state) => state.user);
-  console.log('resocount,', resoCount);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = () => {

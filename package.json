@@ -6,7 +6,12 @@
   "scripts": {
     "start": "concurrently \"webpack-dev-server \" \"nodemon ./server/server.js\"",
     "dev": "webpack-dev-server",
-    "test": "jest __tests__/"
+    "test": "jest __tests__/ --detectOpenHandles -runInBand --watchAll"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "babel-jest"
+    }
   },
   "keywords": [],
   "author": "",
@@ -14,6 +19,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "axios": "^1.4.0",
     "babel-jest": "^29.5.0",
     "body-parser": "^1.20.2",
